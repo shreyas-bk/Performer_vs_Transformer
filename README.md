@@ -1,5 +1,6 @@
+```python
 import torch
-
+```
 Optimal Case: Large number of time points, less number of hidden dimension
 
 
@@ -8,7 +9,7 @@ x = torch.rand(32,2048,64)
 print(x.shape)
 ```
 
-    torch.Size([32, 2048, 64])
+torch.Size([32, 2048, 64])
     
 
 
@@ -20,7 +21,7 @@ q.shape
 
 
 
-    torch.Size([32, 2048, 64])
+torch.Size([32, 2048, 64])
 
 
 
@@ -33,7 +34,7 @@ k.shape
 
 
 
-    torch.Size([32, 64, 2048])
+torch.Size([32, 64, 2048])
 
 
 
@@ -46,7 +47,7 @@ v.shape
 
 
 
-    torch.Size([32, 2048, 64])
+torch.Size([32, 2048, 64])
 
 
 
@@ -62,8 +63,8 @@ transformer_time = toc-tic
 print(transformer_time)
 ```
 
-    torch.Size([32, 2048, 64])
-    0.5003597736358643
+torch.Size([32, 2048, 64])
+0.5003597736358643
     
 
 
@@ -78,8 +79,8 @@ performer_time = toc-tic
 print(performer_time)
 ```
 
-    torch.Size([32, 2048, 64])
-    0.03099536895751953
+torch.Size([32, 2048, 64])
+0.03099536895751953
     
 
 
@@ -87,7 +88,7 @@ print(performer_time)
 print('improvement:',str(round(transformer_time/performer_time,2)),'times faster')
 ```
 
-    improvement: 16.14 times faster
+improvement: 16.14 times faster
     
 
 Worst Case: Less number of time points, large number of hidden dimension
@@ -98,7 +99,7 @@ x = torch.rand(32,64,2048)
 print(x.shape)
 ```
 
-    torch.Size([32, 64, 2048])
+torch.Size([32, 64, 2048])
     
 
 
@@ -109,8 +110,7 @@ q.shape
 
 
 
-
-    torch.Size([32, 64, 2048])
+torch.Size([32, 64, 2048])
 
 
 
@@ -123,7 +123,7 @@ k.shape
 
 
 
-    torch.Size([32, 2048, 64])
+torch.Size([32, 2048, 64])
 
 
 
@@ -136,7 +136,7 @@ v.shape
 
 
 
-    torch.Size([32, 64, 2048])
+torch.Size([32, 64, 2048])
 
 
 
@@ -152,8 +152,8 @@ transformer_time = toc-tic
 print(transformer_time)
 ```
 
-    torch.Size([32, 64, 2048])
-    0.0319976806640625
+torch.Size([32, 64, 2048])
+0.0319976806640625
     
 
 
@@ -168,8 +168,8 @@ performer_time = toc-tic
 print(performer_time)
 ```
 
-    torch.Size([32, 64, 2048])
-    0.5034613609313965
+torch.Size([32, 64, 2048])
+0.5034613609313965
     
 
 
@@ -177,7 +177,7 @@ print(performer_time)
 print('deterioration:',str(round(performer_time/transformer_time,2)),'times slower')
 ```
 
-    deterioration: 15.73 times slower
+deterioration: 15.73 times slower
     
 
 Balanced Case: Equal number of time points, hidden dimensions
@@ -188,7 +188,7 @@ x = torch.rand(32,256,256)
 print(x.shape)
 ```
 
-    torch.Size([32, 256, 256])
+torch.Size([32, 256, 256])
     
 
 
@@ -200,7 +200,7 @@ q.shape
 
 
 
-    torch.Size([32, 256, 256])
+torch.Size([32, 256, 256])
 
 
 
@@ -213,7 +213,7 @@ k.shape
 
 
 
-    torch.Size([32, 256, 256])
+torch.Size([32, 256, 256])
 
 
 
@@ -226,7 +226,7 @@ v.shape
 
 
 
-    torch.Size([32, 256, 256])
+torch.Size([32, 256, 256])
 
 
 
@@ -242,8 +242,8 @@ transformer_time = toc-tic
 print(transformer_time)
 ```
 
-    torch.Size([32, 256, 256])
-    0.030994653701782227
+torch.Size([32, 256, 256])
+0.030994653701782227
     
 
 
@@ -258,6 +258,6 @@ performer_time = toc-tic
 print(performer_time)
 ```
 
-    torch.Size([32, 256, 256])
-    0.03600144386291504
+torch.Size([32, 256, 256])
+0.03600144386291504
     
