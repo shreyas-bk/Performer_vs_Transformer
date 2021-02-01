@@ -66,6 +66,8 @@ print(transformer_time)
 ```
 
 torch.Size([32, 2048, 64])
+
+
 0.5003597736358643
     
 
@@ -82,6 +84,8 @@ print(performer_time)
 ```
 
 torch.Size([32, 2048, 64])
+
+
 0.03099536895751953
     
 
@@ -155,6 +159,8 @@ print(transformer_time)
 ```
 
 torch.Size([32, 64, 2048])
+
+
 0.0319976806640625
     
 
@@ -171,6 +177,8 @@ print(performer_time)
 ```
 
 torch.Size([32, 64, 2048])
+
+
 0.5034613609313965
     
 
@@ -245,6 +253,8 @@ print(transformer_time)
 ```
 
 torch.Size([32, 256, 256])
+
+
 0.030994653701782227
     
 
@@ -261,5 +271,7 @@ print(performer_time)
 ```
 
 torch.Size([32, 256, 256])
+
+
 0.03600144386291504
     
