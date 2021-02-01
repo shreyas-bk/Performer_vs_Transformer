@@ -1,4 +1,4 @@
-[Performers](https://arxiv.org/abs/2009.14794) vs [Transformers](https://arxiv.org/abs/1706.03762)
+A small demo to show the performances of [Performers](https://arxiv.org/abs/2009.14794) and [Transformers](https://arxiv.org/abs/1706.03762) on simple cases
 
 ```python
 import torch
